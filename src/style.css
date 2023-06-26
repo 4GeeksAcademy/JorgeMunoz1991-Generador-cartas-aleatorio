@@ -1,1 +1,59 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+.red {
+  color: red;
+}
+
+.black {
+  color: black;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: green;
+}
+
+.card {
+  width: 400px;
+  height: 600px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+  font-size: 90px;
+  margin: 0;
+  text-align: center;
+  margin-top: 150px;
+}
+
+#cardImage-top,
+#cardImage-bot {
+  font-size: 48px;
+}
+
+#cardImage-top {
+  text-align: left;
+  margin-left: 10px;
+}
+
+#cardImage-bot {
+  text-align: right;
+  margin-right: 10px;
+  transform: rotate(180deg);
+  display: flex;
+  justify-content: start;
+}
+
+.btn-container {
+  margin-top: 20px;
+}
+
+.btn {
+  margin-bottom: 10px;
+}
