@@ -44,7 +44,7 @@ function getRandomCard() {
 
 getRandomCard();
 
-var generateBtn = document.getElementById("generateBtn");
+let generateBtn = document.getElementById("generateBtn");
 generateBtn.addEventListener("click", function() {
   getRandomCard();
 });
@@ -52,3 +52,25 @@ generateBtn.addEventListener("click", function() {
 setInterval(function() {
   getRandomCard();
 }, 10000);
+
+const form = document.getElementById("formulario");
+
+form.addEventListener("submit", event => {
+  event.preventDefault();
+
+  const alturaInput = document.getElementById("heightInput");
+  const anchuraInput = document.getElementById("widthInput");
+  const cardContainer = document.getElementById("cardContainer");
+  const cardImageTop = document.getElementById("cardImage-top");
+  const cardTitle = document.getElementById("cardTitle");
+  const cardImageBot = document.getElementById("cardImage-bot");
+
+  const nuevaAltura = alturaInput.value;
+  const nuevaAnchura = anchuraInput.value;
+
+  cardContainer.style.height = `${nuevaAltura}px`;
+  cardContainer.style.width = `${nuevaAnchura}px`;
+  cardImageTop.style.fontSize = `${nuevaAltura}px`;
+  cardTitle.style.fontSize = `${nuevaAltura}px`;
+  cardImageBot.style.fontSize = `${nuevaAltura}px`;
+});
